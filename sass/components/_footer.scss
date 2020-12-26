@@ -1,0 +1,124 @@
+.section-footer {
+   padding-top: 60px;
+   padding-bottom: 60px;
+}
+
+footer {
+   background-color: $footer-bg-color;
+}
+ 
+.footer-columns {
+   display: flex;
+   align-items: baseline;
+}
+ 
+.footer-space {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   background-color: $footer-bg-color;
+   margin-right: 70px;
+
+   & .logo {
+      margin-bottom: 20px;
+   }
+}
+ 
+.address {
+   font-style: normal;
+   color: $primary-bg-color;
+
+   &-text {
+      display: inline-block;
+      margin-bottom: 10px;
+   }
+}
+ 
+.footer-item:first-child {
+   margin-bottom: 10px;
+}
+ 
+.contacts-footer-item {
+   color: $footer-contacts-color;
+}
+ 
+.our-links {
+   margin-right: 93px;
+}
+ 
+.join-us,
+.sign-up {
+   margin-bottom: 20px;
+ 
+   font-weight: 700;
+   font-style: normal;
+   color: $primary-bg-color;
+}
+ 
+.join-us-footer {
+   display: flex;
+   justify-content: center;
+}
+
+.join-us-item:not(:last-child) {
+   margin-right: 10px;
+}
+ 
+.social-link-footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 44px;
+   height: 44px;
+   color: $primary-heading-color;
+   background-color: rgba(0, 0, 0, 0.1);
+   border-radius: 50%;
+ 
+   transition-property: background-color;
+   transition-duration: 250ms;
+   @extend %transitionTF;
+
+   &:hover,
+   &:focus {
+      background-color: $accent-text-color;
+}
+}
+ 
+.social-icon-footer {
+   fill: currentColor;
+}
+ 
+.sign-email {
+   width: 358px;
+   height: 50px;
+   margin-right: 12px;
+   padding: 15px;
+ 
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   outline-offset: -1px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   box-sizing: border-box;
+   background-color: transparent;
+   border-radius: 4px;
+}
+ 
+.footer-field {
+   height: 50px;
+   display: flex;
+   align-items: flex-start;
+}
+ 
+.submit {
+   position: relative;
+   text-align: left;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+
+   &-name {
+      margin-right: 10px;
+   }
+}
+ 
+.send {
+   position: absolute;
+}

@@ -1,0 +1,47 @@
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+.clients-li {
+   display: flex;
+
+   &:not(:last-child) {
+      margin-right: 30px;
+   }
+}
+
+.client-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 170px;
+   height: 90px;
+   @include bordered($clients-logo-color);
+ 
+   transition-property: border;
+   transition-duration: 250ms;
+   @extend %transitionTF;
+
+   &:hover,
+   &:focus {
+      @include bordered($accent-text-color);
+   }
+}
+ 
+ .client-item {
+   transition-property: fill;
+   transition-duration: 250ms;
+   @extend %transitionTF;
+
+   .client-link:hover &,
+   .client-link:focus & {
+      fill: $accent-text-color;
+   }
+}
+ 
+.clients-logo {
+   width: 44px;
+   height: 49px;
+   fill: $clients-logo-color;
+}

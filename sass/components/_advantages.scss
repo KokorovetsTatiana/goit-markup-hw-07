@@ -1,0 +1,51 @@
+.advantages-list {
+    display: flex;
+    justify-content: center;
+}
+  
+.list-li {
+   display: inline-block;
+   justify-content: center;
+ 
+   &:not(:last-child) {
+      margin-right: 30px;
+   }
+}
+ 
+.features {
+    display: block;
+    width: 270px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+.group-1 {
+   @extend %features-item;
+   background-image:url("../images/icons/sprite.svg#group-1");
+}
+ 
+.group-2 {
+   @extend %features-item;
+   background-image:url("../images/icons/sprite.svg#group-2");
+}
+ 
+ .group-3 {
+   @extend %features-item;
+   background-image:url("../images/icons/sprite.svg#group-3");
+ }
+ 
+ .group-4 {
+   @extend %features-item;
+   background-image:url("../images/icons/sprite.svg#group-4");
+ }
+ 
+ .advantages-heading {
+    display: inline-block;
+    margin-bottom: 10px;
+ 
+    @include fontChar(14px, 700, 1.44);
+    text-transform: uppercase;
+    color: $secondary-heading-color;
+ }

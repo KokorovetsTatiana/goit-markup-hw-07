@@ -1,0 +1,82 @@
+.team {
+    background-color: $secondary-bg-color;
+ }
+ 
+ .team-list {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .team-item {
+    background-color: $primary-bg-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+   }
+ }
+ 
+ .team-photo {
+    margin-bottom: 30px;
+ }
+ 
+ .team-name {
+    margin-bottom: 10px;
+ 
+    @include fontChar(16px, 500, 1.19);
+    text-align: center;
+    color: $secondary-heading-color;
+ }
+
+ .position {
+    margin-bottom: 30px;
+ 
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+ }
+ 
+ .social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+ }
+ 
+ .social-links-item:not(:last-child) {
+    margin-right: 10px;
+ }
+ 
+ .social-links .social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 50%;
+    color: $clients-logo-color;
+ }
+ 
+ .social-icon-item {
+    fill: $clients-logo-color;
+ 
+    transition-property: fill;
+    transition-duration: 250ms;
+    @extend %transitionTF;
+
+    .social-list-link:hover &,
+    .social-list-link:focus & {
+       fill: #ffffff;
+    }
+ }
+ 
+  .social-list-link {
+    transition-property: background-color;
+    transition-duration: 250ms;
+    @extend %transitionTF;
+
+    &:hover,
+    &:focus {
+       background-color: $accent-text-color;
+    }
+ } 

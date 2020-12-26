@@ -1,0 +1,142 @@
+header .container {
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid #ECECEC;
+}
+ 
+.logo-header {
+   margin-right: 93px;
+}
+ 
+.logo {
+   @include fontChar(26px, 700, 1.19);
+   color: $secondary-heading-color;
+   font-family: 'Raleway', sans-serif;
+}
+ 
+.logo > span {
+   color: $accent-text-color;
+}
+ 
+.logo .white-logo {
+   color: $primary-heading-color;
+}
+ 
+.site-nav {
+   display: flex;
+}
+ 
+.site-nav-li {
+   padding-top: 24px;
+   padding-bottom: 25px;
+
+   &:not(:last-child) {
+      margin-right: 50px;
+   }
+}
+ 
+.site-nav-item {
+   position: relative;
+   padding-top: 24px;
+   padding-bottom: 25px;
+ 
+   @include fontChar(14px, 500, 1.14);
+   letter-spacing: 0.02em;
+   color: $secondary-heading-color;
+ 
+   transition-property: color;
+   transition-duration: 250ms;
+   @extend %transitionTF;
+
+   &::after {
+      position: absolute;
+      content: "";
+      height: 4px;
+      width: 100%;
+      bottom: -6px;
+      left: 0;
+      border-radius: 2px;
+      background-color: $accent-text-color;
+   
+      opacity: 0;
+      transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
+   }
+}
+
+.site-nav-item:focus::after {
+   opacity: 1;
+   }
+
+.site-nav-li:hover .site-nav-item::after {
+   opacity: 1;
+}
+ 
+.contacts-li:not(:last-child) {
+   margin-right: 50px;
+}
+ 
+.contacts {
+   display: flex;
+   margin-left: auto;
+}
+ 
+.header-icon {
+   margin-right: 10px;
+}
+ 
+.contacts-item {
+   display: flex;
+   align-items: center;
+   padding-top: 28px;
+   padding-bottom: 22px;
+ 
+   @include fontChar(14px, 500, 1.86);
+   letter-spacing: 0.02em;
+   color: $main-text-color;
+ 
+   transition-property: color;
+   transition-duration: 250ms;
+   @extend %transitionTF;
+
+} 
+ 
+.site-nav-item:hover,
+.site-nav-item:focus,
+.contacts-item:hover,
+.contacts-item:focus {
+   color: $accent-text-color;
+    
+}
+ 
+.mail-icon {
+   margin-right: 10px;
+   fill: $main-text-color;
+ 
+   transition-property: fill;
+   transition-duration: 250ms;
+   @extend %transitionTF;
+
+   .contacts-item:hover &,
+   .contacts-item:focus & {
+      fill: $accent-text-color;
+   } 
+}
+ 
+.tel-icon {
+   margin-right: 10px;
+   fill: $main-text-color;
+ 
+   transition-property: fill;
+   transition-duration: 250ms;
+   @extend %transitionTF;
+
+   .contacts-item:hover &,
+   .contacts-item:focus & {
+      fill: $accent-text-color;
+   }
+}
+ 
+.contacts-li {
+   display: flex;
+   align-items: center;
+}
